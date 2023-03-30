@@ -1,0 +1,16 @@
+import styled from 'styled-components';
+
+export const Form = styled.form`
+  display: flex;
+  gap: 5px;
+
+  input {
+    /* flex-grow: 1; */
+    padding: 8px;
+    font: inherit;
+
+    :focus {
+      outline-color: #1976d2;
+    }
+  }
+`;
