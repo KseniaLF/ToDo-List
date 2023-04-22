@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { statusFilters } from 'redux/constants';
-import { getStatusFilter } from 'redux/selectors';
+import { selectStatusFilter } from 'redux/selectors';
 
 import { Button } from 'components/Button/Button';
 import { FilterWrapper } from './StatusFilter.styled';
@@ -9,7 +9,7 @@ import { setStatusFilter } from 'redux/filtersSlice';
 export const StatusFilter = () => {
   const dispatch = useDispatch();
 
-  const filter = useSelector(getStatusFilter);
+  const filter = useSelector(selectStatusFilter);
 
   const handleFilterChange = filter => dispatch(setStatusFilter(filter));
 
